@@ -18,10 +18,10 @@ export function Home() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-center lg:text-left max-w-2xl"
         >
-          <h1 className="text-6xl font-extrabold tracking-wide leading-tight text-shadow-lg">
+          <h1 className="text-6xl font-extrabold text-gradient fade-in">
             Olá, sou <span className="text-secondary">Rogério Fontes</span>!
           </h1>
-          <p className="text-xl text-gray-300 mt-6 leading-relaxed">
+          <p className="text-xl text-gray-300 mt-6 leading-relaxed fade-in">
             Empreendedor, mentor de startups, apresentador e apaixonado por inovação e tecnologia.
           </p>
           <div className="mt-8">
