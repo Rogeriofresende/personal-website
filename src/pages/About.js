@@ -1,20 +1,20 @@
 import React from "react";
-import minhaFoto from "../assets/profile.jpg";
+import profileImage from "../assets/profile.jpg";
 import { Link } from "react-router-dom";
 
 function About() {
   return (
     <div className="p-12 bg-gray-100 text-center min-h-screen flex flex-col items-center justify-center">
-      <section className="flex flex-col md:flex-row items-center gap-8 mt-16 px-6">
-        <img src={minhaFoto} alt="Minha Foto" className="w-64 h-64 rounded-full shadow-lg transition transform hover:scale-105" />
-        <div>
-          <h2 className="text-4xl font-bold">Sobre Mim</h2>
-          <p className="text-gray-600 mt-4 text-lg leading-relaxed">
-            Sou um entusiasta da tecnologia e do empreendedorismo. Trabalho com desenvolvimento web e adoro criar soluções inovadoras.
-          </p>
-          <Link to="/contact" className="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow-md text-lg transition transform hover:scale-105">
-            Entre em Contato
-          </Link>
+      <section id="about" className="py-20 bg-background">
+        <div className="container mx-auto flex flex-col md:flex-row items-center gap-10">
+          <img src={profileImage} alt="Rogério Resende" className="w-1/3 rounded-lg shadow-lg" />
+          <div className="w-2/3">
+            <h2 className="text-4xl font-bold text-primary">Sobre Mim</h2>
+            <p className="text-lg mt-4 text-secondary">
+              Sou um profissional apaixonado por tecnologia, startups e inovação. Minha missão é ajudar empreendedores
+              e criadores a alcançar seu potencial máximo.
+            </p>
+          </div>
         </div>
       </section>
       <h2 className="text-2xl font-semibold text-gray-800 mt-6">Principais Competências</h2>
