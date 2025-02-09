@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -32,19 +33,19 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#about" className="hover:text-primary">
+            <Link to="about" className="hover:text-primary">
               Sobre
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#works" className="hover:text-primary">
+            <Link to="works" className="hover:text-primary">
               Projetos
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="hover:text-primary">
+            <Link to="contact" className="hover:text-primary">
               Contato
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

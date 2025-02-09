@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -25,10 +25,10 @@ function Footer() {
       <p>© 2025 Rogerio Fontes. Todos os direitos reservados.</p>
       <div className="flex justify-center space-x-4 mt-3">
         <a href="https://linkedin.com/in/rogeriofontes" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/linkedin.svg" alt="LinkedIn" className="w-6 h-6" />
+          <img src={process.env.PUBLIC_URL + "/assets/linkedin.svg"} alt="LinkedIn" className="w-6 h-6" />
         </a>
         <a href="https://youtube.com/@Lanceiessa" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/youtube.svg" alt="YouTube" className="w-6 h-6" />
+          <img src={process.env.PUBLIC_URL + "/assets/youtube.svg"} alt="YouTube" className="w-6 h-6" />
         </a>
       </div>
     </footer>
@@ -38,16 +38,13 @@ function Footer() {
 export default function App() {
   return (
     <Router>
-      <div className="animated-background min-h-screen">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/works" element={<Works />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/works" element={<Works />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </Router>
   );
 }
