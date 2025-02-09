@@ -102,6 +102,7 @@ button:hover {
   align-items: center;
   padding: 10px 20px;
   background: var(--background-dark);
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .navbar a {
@@ -196,6 +197,10 @@ button:hover {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
+}
+
+section {
+  padding-top: 100px; /* Adiciona mais espaço entre seções */
 }
 
 @media (max-width: 768px) {
