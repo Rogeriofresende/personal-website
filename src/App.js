@@ -41,10 +41,10 @@ export default function App() {
       <div className="animated-background min-h-screen">
         <Navbar />
         <Routes>
-          <Route path="/" element={<FadeIn><section id="home"><Home /></section></FadeIn>} />
-          <Route path="/about" element={<FadeIn><section id="about"><About /></section></FadeIn>} />
-          <Route path="/works" element={<FadeIn><section id="works"><Works /></section></FadeIn>} />
-          <Route path="/contact" element={<FadeIn><section id="contact"><Contact /></section></FadeIn>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/works" element={<Works />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

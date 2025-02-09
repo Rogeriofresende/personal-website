@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <div className="p-12 bg-gray-100 text-center min-h-screen flex flex-col items-center justify-center">
-      <section id="about" className="w-full flex flex-col md:flex-row items-center py-20 bg-background">
+      <section id="about" className="w-full flex flex-col md:flex-row items-center py-20 bg-background my-8">
         <div className="w-full md:w-1/2 p-6">
           <h2 className="text-3xl font-bold text-primary">Sobre Mim</h2>
           <p className="text-gray-600 mt-4">Trabalho com tecnologia, startups e criação de conteúdo.</p>
