@@ -32,6 +32,13 @@ function Contact() {
           {submitted ? "Enviado ✅" : "Enviar Mensagem"}
         </motion.button>
       </motion.form>
+      <div className="text-center mt-6">
+        <a href="mailto:seuemail@email.com">
+          <button className="bg-blue-500 text-white py-2 px-4 rounded-md">
+            Contate-me
+          </button>
+        </a>
+      </div>
     </section>
   );
 }

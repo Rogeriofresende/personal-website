@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <motion.div 
-      className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
+      className="relative h-screen flex flex-col justify-center items-center text-center text-white bg-cover bg-center background-image"
       style={{ backgroundImage: `url(${profileImage})` }}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -32,6 +32,11 @@ function Home() {
         <a href="#contact" className="mt-6 bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all">
           Entre em Contato
         </a>
+        <img 
+          src={profileImage} 
+          alt="Foto de Rogério Fontes"
+          className="rounded-full w-40 h-40 object-cover shadow-lg mx-auto mt-6"
+        />
       </div>
     </motion.div>
   );
