@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Parallax } from "react-parallax";
 import profileImage from "../assets/profile.jpg";
 
 function Home() {
@@ -19,15 +18,22 @@ function Home() {
   }, []);
 
   return (
-    <Parallax bgImage={profileImage} strength={500}>
-      <div className="h-screen flex flex-col justify-center items-center text-center text-white">
-        <h1 className="text-5xl font-bold">{text}|</h1>
+    <motion.div 
+      className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
+      style={{ backgroundImage: `url(${profileImage})` }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+      <div className="absolute inset-0 bg-black/50"></div>  {/* Camada escura */}
+      <div className="relative text-center">
+        <h1 className="text-5xl font-bold drop-shadow-lg">{text}|</h1>
         <p className="text-lg mt-4 max-w-2xl">Ajudando startups a crescer e inovar com tecnologia.</p>
         <a href="#contact" className="mt-6 bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all">
           Entre em Contato
         </a>
       </div>
-    </Parallax>
+    </motion.div>
   );
 }
 
