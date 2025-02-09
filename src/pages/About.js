@@ -1,6 +1,6 @@
 import React from "react";
 
-export function About() {
+function About() {
   return (
     <div className="p-12 bg-gray-100 text-center min-h-screen flex flex-col items-center justify-center">
       <h1 className="text-4xl font-bold text-gray-900">Sobre Mim</h1>
@@ -20,3 +20,5 @@ export function About() {
     </div>
   );
 }
+
+export default About;

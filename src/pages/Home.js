@@ -2,51 +2,36 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export function Home() {
+function Home() {
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 50 }} 
-      animate={{ opacity: 1, y: 0 }} 
-      transition={{ duration: 0.8 }} 
-      className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gradient-to-r from-black via-primary to-secondary text-white px-10 lg:px-20"
-    >
-      <div className="container">
-        {/* Texto Principal */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }} 
-          animate={{ opacity: 1, x: 0 }} 
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-center lg:text-left max-w-2xl"
-        >
-          <h1 className="text-6xl font-extrabold text-gradient fade-in">
-            Olá, sou <span className="text-secondary">Rogério Fontes</span>!
-          </h1>
-          <p className="text-xl text-gray-300 mt-6 leading-relaxed fade-in">
-            Empreendedor, mentor de startups, apresentador e apaixonado por inovação e tecnologia.
-          </p>
-          <div className="mt-8">
-            <Link to="/about">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="button"
-              >
-                Me Conheça Melhor
-              </motion.button>
-            </Link>
-          </div>
-        </motion.div>
+    <div className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white px-6">
+      {/* Seção Principal */}
+      <motion.h1 className="text-5xl font-bold text-gradient" 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Olá, sou Rogério Fontes!
+      </motion.h1>
+      
+      <p className="text-xl text-gray-400 mt-4">
+        Conectando pessoas, tecnologia e empreendedorismo.
+      </p>
 
-        {/* Imagem de Destaque */}
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }} 
-          animate={{ opacity: 1, x: 0 }} 
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-12 lg:mt-0 lg:ml-16"
-        >
-          <img src="/images/profile.png" alt="Rogério Fontes" className="w-96 h-96 object-cover rounded-full shadow-lg border-4 border-secondary" />
-        </motion.div>
+      <img src="/assets/profile.jpg" 
+        alt="Rogério Fontes" 
+        className="rounded-full w-48 h-48 mt-6 shadow-lg" />
+      
+      <div className="mt-6 space-x-4">
+        <Link to="/about" className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition">
+          Saiba Mais
+        </Link>
+        <Link to="/contact" className="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition">
+          Entre em Contato
+        </Link>
       </div>
-    </motion.div>
+    </div>
   );
 }
+
+export default Home;

@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { About } from "./pages/About";
-import { Works } from "./pages/Works";
-import { Contact } from "./pages/Contact";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Works from "./pages/Works";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
@@ -30,7 +30,6 @@ export default function App() {
         <div className="footer-icons">
           <a href="https://www.linkedin.com/in/rogerio-fontes-de-resende/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
           <a href="https://www.youtube.com/@Lanceiessa" target="_blank" rel="noopener noreferrer">📹 YouTube</a>
-          <a href="/contact">✉️ Contato</a>
         </div>
       </footer>
     </Router>
