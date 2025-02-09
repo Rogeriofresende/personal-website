@@ -11,7 +11,7 @@ function Contact() {
   };
 
   return (
-    <section className="container mt-10">
+    <section id="contact" className="container mt-10">
       <h2 className="text-4xl font-bold text-center">Entre em Contato</h2>
       <motion.form 
         className="mt-6 flex flex-col space-y-4 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg"
