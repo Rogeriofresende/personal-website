@@ -8,16 +8,16 @@ import Contact from "./pages/Contact";
 export default function App() {
   return (
     <Router>
-      <nav className="fixed top-0 left-0 w-full bg-black bg-opacity-80 backdrop-blur-md text-white flex justify-between items-center px-6 py-4 shadow-md">
-        <h1 className="text-2xl font-bold tracking-wide">Rogério Fontes</h1>
-        <div className="flex space-x-8 text-lg">
-          <Link to="/" className="hover:text-gray-400 transition duration-300">Home</Link>
-          <Link to="/about" className="hover:text-gray-400 transition duration-300">Sobre</Link>
-          <Link to="/works" className="hover:text-gray-400 transition duration-300">Projetos</Link>
-          <Link to="/contact" className="hover:text-gray-400 transition duration-300">Contato</Link>
-        </div>
+      <nav className="fixed top-0 w-full bg-black bg-opacity-50 text-white p-4 flex justify-between">
+        <h1 className="text-xl font-bold ml-4">Rogerio Fontes</h1>
+        <ul className="flex space-x-4 mr-4">
+          <li className="hover:text-gray-400"><Link to="/">Home</Link></li>
+          <li className="hover:text-gray-400"><Link to="/about">Sobre</Link></li>
+          <li className="hover:text-gray-400"><Link to="/works">Projetos</Link></li>
+          <li className="hover:text-gray-400"><Link to="/contact">Contato</Link></li>
+        </ul>
       </nav>
-      <div className="pt-20">
+      <div className="pt-24">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -25,11 +25,15 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
-      <footer className="footer">
-        <p>&copy; 2025 Rogério Fontes. Todos os direitos reservados.</p>
-        <div className="footer-icons">
-          <a href="https://www.linkedin.com/in/rogerio-fontes-de-resende/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-          <a href="https://www.youtube.com/@Lanceiessa" target="_blank" rel="noopener noreferrer">📹 YouTube</a>
+      <footer className="bg-black text-gray-400 py-6 text-center">
+        <p className="text-sm">&copy; 2025 Rogério Fontes - Todos os direitos reservados.</p>
+        <div className="mt-2 space-x-4">
+          <a href="https://www.linkedin.com/in/rogerio-fontes-de-resende/" target="_blank" className="hover:text-white">
+            LinkedIn
+          </a>
+          <a href="https://www.youtube.com/@Lanceiessa" target="_blank" className="hover:text-white">
+            YouTube
+          </a>
         </div>
       </footer>
     </Router>
