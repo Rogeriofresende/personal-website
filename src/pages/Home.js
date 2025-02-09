@@ -1,37 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import minhaFoto from "../assets/profile.jpg";
 
 function Home() {
-  return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white px-6">
-      {/* Seção Principal */}
-      <motion.h1 className="text-6xl font-bold text-gradient mt-10"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Olá, sou Rogério Fontes!
-      </motion.h1>
-      
-      <p className="text-xl text-gray-400 mt-4">
-        Conectando pessoas, tecnologia e empreendedorismo.
-      </p>
+  const [text, setText] = useState('');
+  const fullText = "Empreendedor, Desenvolvedor & Criador de Conteúdo";
 
-      <img src={minhaFoto} 
-        alt="Minha Foto" 
-        className="rounded-full w-48 h-48 mt-6 shadow-lg" />
-      
-      <div className="mt-6 space-x-4">
-        <Link to="/about" className="px-6 py-3 bg-primary text-white rounded-full font-semibold shadow-md hover:bg-secondary transition-all">
-          Saiba Mais
-        </Link>
-        <Link to="/contact" className="px-6 py-3 border border-white text-white rounded-full font-semibold hover:bg-white hover:text-black transition-all">
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setText(fullText.slice(0, i));
+      i++;
+      if (i > fullText.length) clearInterval(interval);
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="flex flex-col md:flex-row items-center justify-center gap-12 min-h-screen text-center md:text-left px-6 fade-in">
+      <div>
+        <h1 className="text-5xl font-bold">{text}|</h1>
+        <p className="text-gray-500 mt-4 text-lg">Ajudando startups a crescer e inovar com tecnologia.</p>
+        <a href="/contact" className="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow-md text-lg transition transform hover:scale-105">
           Entre em Contato
-        </Link>
+        </a>
       </div>
-    </div>
+      <img src={minhaFoto} alt="Minha Foto" className="w-64 h-64 rounded-full shadow-lg transition transform hover-scale" />
+    </section>
   );
 }
 

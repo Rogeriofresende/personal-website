@@ -1,32 +1,33 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const projects = [
+  { title: "Startup X", description: "Plataforma SaaS para gestão empresarial.", image: "/assets/startup.jpg", link: "#" },
+  { title: "Podcast", description: "Meu podcast sobre startups e inovação.", image: "/assets/podcast.jpg", link: "#" },
+  { title: "Fut XP", description: "Jogo de futebol RPG que mistura estratégia e ação.", image: "/assets/futxp.jpg", link: "#" }
+];
+
 function Works() {
-  const projects = [
-    { title: "Lancei Essa Podcast", link: "https://www.youtube.com/@Lanceiessa" },
-    { title: "Mentoria para Startups", link: "https://www.linkedin.com/in/rogerio-fontes-de-resende/" }
-  ];
-
   return (
-    <div className="py-16 bg-gray-900 text-white text-center">
-      <h1 className="text-5xl font-extrabold tracking-wide">Projetos em Destaque</h1>
-      <p className="text-lg text-gray-400 mt-4">Veja alguns dos meus trabalhos.</p>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 px-8">
+    <section className="container mt-10 fade-in">
+      <h2 className="text-4xl font-bold text-center">Meus Projetos</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
         {projects.map((project, index) => (
           <motion.div key={index}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg text-white text-left flex flex-col justify-between"
+            className="bg-white p-6 shadow-lg rounded-lg hover:shadow-xl transform transition hover:scale-105"
           >
-            <h2 className="text-xl font-bold">{project.title}</h2>
-            <a href={project.link} className="text-blue-400 hover:underline mt-2 inline-block">
-              Saiba mais →
+            <img src={project.image} alt={project.title} className="w-full h-40 object-cover rounded-lg" />
+            <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
+            <p className="text-gray-600 mt-2">{project.description}</p>
+            <a href={project.link} className="mt-3 inline-block text-blue-600 underline">
+              Ver mais
             </a>
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

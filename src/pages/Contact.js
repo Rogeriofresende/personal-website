@@ -2,28 +2,17 @@ import React from "react";
 
 function Contact() {
   return (
-    <div className="p-12 text-center flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-5xl font-extrabold text-gray-900">Contato</h1>
-      <form className="mt-6 bg-white p-8 rounded-lg shadow-lg w-full max-w-md flex flex-col">
-        <label className="block">Nome</label>
-        <input
-          type="text"
-          className="w-full p-2 mb-4 bg-gray-700 border border-gray-600"
-        />
-        <label className="block">Email</label>
-        <input
-          type="email"
-          className="w-full p-2 mb-4 bg-gray-700 border border-gray-600"
-        />
-        <label className="block">Mensagem</label>
-        <textarea
-          className="w-full p-2 mb-4 bg-gray-700 border border-gray-600"
-        ></textarea>
-        <button className="w-full bg-blue-500 hover:bg-blue-700 text-white py-2">
-          Enviar
+    <section className="container mt-10 fade-in">
+      <h2 className="text-4xl font-bold text-center">Entre em Contato</h2>
+      <form className="mt-6 flex flex-col space-y-4 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <input type="text" placeholder="Digite seu nome completo" className="border p-3 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <input type="email" placeholder="Seu melhor e-mail" className="border p-3 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <textarea placeholder="Escreva sua mensagem aqui..." className="border p-3 rounded-lg w-full h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-full shadow-md text-lg transition transform hover:scale-105">
+          Enviar Mensagem
         </button>
       </form>
-    </div>
+    </section>
   );
 }
 
