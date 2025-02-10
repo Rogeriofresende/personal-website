@@ -50,6 +50,21 @@ function Home() {
               <img src={youtubeIcon} alt="YouTube" className="w-8 h-8" />
             </a>
           </div>
+          <div className="flex space-x-4 mt-6">
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition">
+                Entre em contato
+              </button>
+            </Link>
+            <a
+              href="https://www.linkedin.com/in/rogerio-fontes-de-resende/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg shadow-md transition"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
       <button

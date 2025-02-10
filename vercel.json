@@ -1,9 +1,7 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+  "routes": [
+    { "src": "/static/js/(.*)", "dest": "/static/js/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

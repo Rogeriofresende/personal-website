@@ -1,0 +1,6 @@
+// ...existing code...
+<div id="contact">
+  <h2>Entre em Contato</h2>
+  <p>Email: seuemail@email.com</p>
+</div>
+// ...existing code...

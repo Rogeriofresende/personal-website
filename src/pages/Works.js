@@ -1,25 +1,48 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const projects = [
-  { title: "Startup X", description: "Uma solução inovadora para empreendedores." },
-  { title: "Tech Hub", description: "Plataforma para networking entre startups." },
-  { title: "Mentoria 360", description: "Ajudando novos empreendedores a crescerem." },
+  { year: "2024", title: "Podcast Lancei Essa", description: "Sou sócio e host deste podcast sobre startups." },
+  { year: "2023", title: "Consultoria Tech", description: "Ajudei startups a escalarem seus produtos." },
+  { year: "2022", title: "Desenvolvimento de Produto", description: "Construí soluções para o setor financeiro." },
+  { year: "2020", title: "Primeira Startup", description: "Co-fundei minha primeira empresa de tecnologia." },
 ];
 
-function Works() {
+const Works = () => {
   return (
-    <section id="works" className="py-20 my-8">
-      <h2 className="text-4xl font-bold text-primary text-center">Projetos</h2>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-        {projects.map((project, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all">
-            <h3 className="text-2xl font-semibold text-secondary">{project.title}</h3>
-            <p className="text-gray-600 mt-2">{project.description}</p>
-          </div>
-        ))}
+    <section className="p-10">
+      <h2 className="text-3xl font-bold text-gray-900 text-center">Minha Trajetória</h2>
+
+      {/* Seção do Podcast */}
+      <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
+        <h3 className="text-2xl font-semibold">🎙 Podcast Lancei Essa</h3>
+        <p className="text-gray-700">O podcast sobre startups que sou host e sócio.</p>
+        <a href="https://www.youtube.com/@Lanceiessa" target="_blank" rel="noopener noreferrer">
+          <button className="mt-4 bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg">
+            Escute agora
+          </button>
+        </a>
       </div>
+
+      {/* Linha do Tempo */}
+      <motion.div 
+        className="flex overflow-x-auto space-x-6 mt-6 p-4"
+        whileTap={{ cursor: "grabbing" }}
+      >
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="min-w-[250px] p-6 bg-white rounded-lg shadow-lg"
+            whileHover={{ scale: 1.05 }}
+          >
+            <h3 className="text-xl font-semibold">{project.year}</h3>
+            <p className="text-gray-700">{project.title}</p>
+            <p className="text-gray-500">{project.description}</p>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
-}
+};
 
 export default Works;

@@ -28,22 +28,22 @@ const Navbar = () => {
         </a>
         <ul className="flex space-x-4">
           <li>
-            <a href="#home" className="hover:text-primary">
+            <Link to="/" className="hover:text-primary">
               Home
-            </a>
-          </li>
-          <li>
-            <Link to="about" className="hover:text-primary">
-              Sobre
             </Link>
           </li>
           <li>
-            <Link to="works" className="hover:text-primary">
+            <Link to="/works" className="hover:text-primary">
               Projetos
             </Link>
           </li>
           <li>
-            <Link to="contact" className="hover:text-primary">
+            <Link to="/about" className="hover:text-primary">
+              Sobre
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="hover:text-primary">
               Contato
             </Link>
           </li>
