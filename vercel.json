@@ -1,7 +1,8 @@
 {
   "version": 2,
+  "public": "build",
   "routes": [
-    { "src": "/static/js/(.*)", "dest": "/static/js/$1" },
+    { "src": "/static/(.*)", "dest": "/static/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
